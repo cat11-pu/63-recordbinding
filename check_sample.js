@@ -13,10 +13,10 @@ const bound = bind(spec.schema, spec.rows);
 const checked = check(spec.schema, bound.bound);
 const view = render(spec);
 
-emit("绑定结果 =", JSON.stringify(bound.bound));
+emit("绑定结果 =", bound.bound);
 emit("填了默认值的字段数 =", bound.defaults);
 emit("做过类型转换的字段数 =", bound.coerced);
-emit("错误定位 =", JSON.stringify(checked.errors));
+emit("错误定位 =", checked.errors);
 emit("无效行数 =", checked.invalid);
 emit("重复绑定是否幂等 =", view.idempotent);
 emit("是否全部有效 =", view.valid);
