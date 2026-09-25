@@ -1,0 +1,15 @@
+{
+  "required_code": "E_REQUIRED_MISSING",
+  "bad_type_code": "E_BAD_TYPE",
+  "schema": [
+    {"name": "id", "type": "number", "required": true},
+    {"name": "name", "type": "string", "required": false, "default": "anon"},
+    {"name": "score", "type": "number", "required": false, "default": 0}
+  ],
+  "rows": [
+    {"id": "7", "name": "alice"},
+    {"name": "bob", "score": "8"},
+    {"id": "9", "score": "x"}
+  ],
+  "coerce": true
+}
